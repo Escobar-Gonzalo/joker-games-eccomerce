@@ -1,6 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap');
+
 #root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100vh;
+  background-image: linear-gradient(to left, #52057b, #5d0c8c, #67139e, #721bb0, #7c22c2, #852ccc, #8e36d7, #973fe1, #a14ce5, #aa58e9, #b363ed, #bc6ff1);
 }
 
+h1{
+  font-family: 'Gasoek One';
+}
+
+li{
+  display: table-cell; 
+  position: relative;
+}
+
+li::after{
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  width: 0;
+}
+
+li:hover::after{
+  width: 100%; 
+  left: 0; 
+}
