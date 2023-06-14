@@ -5,10 +5,14 @@
   padding: 0;
   box-sizing: border-box;
   height: 100vh;
-  background-image: linear-gradient(to left, #52057b, #5d0c8c, #67139e, #721bb0, #7c22c2, #852ccc, #8e36d7, #973fe1, #a14ce5, #aa58e9, #b363ed, #bc6ff1);
+  background-image: linear-gradient(to right bottom, #45eec6, #42ead0, #46e5d7, #51e0dd, #5edbe0, #4bd6ea, #3dd1f3, #3ccbfb, #37c0ff, #66b1ff, #9d9dff, #d281ff);
 }
 
 h1{
+  font-family: 'Gasoek One';
+}
+
+h2{
   font-family: 'Gasoek One';
 }
 
@@ -25,7 +29,7 @@ li::after{
   height: 2px;
   left: 50%;
   position: absolute;
-  background: #fff;
+  background: #fdbeff;
   transition: width 0.5s ease 0s, left 0.5s ease 0s;
   width: 0;
 }
@@ -33,4 +37,5 @@ li::after{
 li:hover::after{
   width: 100%; 
   left: 0; 
+  box-shadow: 0px 0px 3px 0px rgba(222, 91, 255, 1);
 }
