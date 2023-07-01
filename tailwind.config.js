@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow:{
+        'navShadow': '0 0 0 100vmax rgba(0, 0, 0, .5)'
+      },
       dropShadow:{
         'text-glow': '0 0 4px rgb(222,91,255)',
         'text-dark-glow': '0 0 10px rgb(68,156,255)',

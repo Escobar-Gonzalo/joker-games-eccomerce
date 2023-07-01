@@ -5,8 +5,8 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 const App = () => {
   return (
     <>
-    <NavBar/>
-    <ItemListContainer greeting={"¡Bienvenido!"}/>
+    <NavBar class="z-10"/>
+    {/*<ItemListContainer greeting={"¡Bienvenido!"}/>*/}
     </>
   )
 }
