@@ -6,7 +6,7 @@ const App = () => {
   return (
     <>
     <NavBar class="z-10"/>
-    {/*<ItemListContainer greeting={"¡Bienvenido!"}/>*/}
+    <ItemListContainer greeting={"¡Bienvenido!"} subtitle={"Si tenés plata para comprar un videojuego, ya sos gamer!"}/>
     </>
   )
 }

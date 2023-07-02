@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: auto;
   background-image: linear-gradient(to right bottom, #45eec6, #42ead0, #46e5d7, #51e0dd, #5edbe0, #4bd6ea, #3dd1f3, #3ccbfb, #37c0ff, #66b1ff, #9d9dff, #d281ff);
 }
 
@@ -39,6 +40,18 @@ li:hover::after{
   width: 100%; 
   left: 0; 
   box-shadow: 0px 0px 3px 0px rgba(222, 91, 255, 1);
+}
+
+.contTitle{
+  text-shadow: 2px 2px 10px rgb(222,91,255);
+}
+
+.contSubTitle{
+  text-shadow: 2px 2px 10px rgb(222,91,255);
+}
+
+.itemCont{
+  background-image: linear-gradient(to left top, #00a3e9, #0095e3, #0087dc, #0079d4, #006acb);
 }
 
 @media screen and (max-width: 768px) {
