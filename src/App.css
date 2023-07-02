@@ -44,18 +44,28 @@ li:hover::after{
 @media screen and (max-width: 768px) {
   
   .navMenu{
+    opacity:0;
+    visibility: hidden;
     position: absolute;
+    width: 40%;
     top: 0;
     right: 0;  
     bottom: 0;
     background-color: black;
-    padding: 6rem, 5rem, 6rem, 6rem;
+    padding: 2rem 1rem 2rem 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+  }
+
+  .navMenu.visOn{
+    opacity: 1;
+    visibility: visible;
   }
 
   .navList{
     display: flex;
     flex-direction: column;
     align-items: end;
+    gap: 1rem;
 
   }
   .navList li{
@@ -64,6 +74,8 @@ li:hover::after{
     color:white;
     font-family: Poppins, sans-serif;
     font-weight: 400;
+    font-size: 1rem;
+    text-shadow: 2px 2px 4px rgb(222,91,255);
   }
   
   .navList li::after{
@@ -84,5 +96,17 @@ li:hover::after{
     left: 0; 
     box-shadow: 0px 0px 3px 0px rgba(222, 91, 255, 1);
   }
+  .closeImg{
+    width: 36px;
+    filter: drop-shadow(2px 2px 4px rgb(222,91,255));
+    cursor: pointer;
+  }
 
+}
+
+@media (min-width: 768px) and (max-width: 1920px){
+.navMenu{
+  opacity: 0;
+  visibility: hidden;
+}
 }

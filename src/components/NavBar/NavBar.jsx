@@ -1,10 +1,13 @@
-import React from 'react'
+import { useMenu } from "../../Hooks/UseMenu"
 import logo from "../../assets/logo-joker2.svg"
 import menu from "../../assets/menu.svg"
 import close from "../../assets/close.svg"
 import CartWidget from '../CartWidget/CartWidget'
 
 const NavBar = () => {
+
+    const {openMenu, closeMenu} = useMenu()
+
     return (
         <>
         <header class="flex flex-col w-screen bg-gradient-to-r from-Nv-black from-40% to-Nv-shadow to-60% sticky">
@@ -21,8 +24,8 @@ const NavBar = () => {
                     <li>Simuladores</li>
                 </ul>
                 <CartWidget/>
-                <div className='menuButton' class="h-12 w-12 flex flex-row flex-nowrap justify-center rounded-full bg-black cursor-pointer md:hidden">
-                    <img class="w-8 drop-shadow-div-glow"src={menu} alt="" />
+                <div onClick={openMenu} class="menuButton h-12 w-12 flex flex-row flex-nowrap justify-center rounded-full bg-black cursor-pointer md:hidden">
+                    <img class="w-8 drop-shadow-div-glow" src={menu} alt="" />
                 </div>
             </nav>
             <ul class="hidden md:flex flex-row font-sans font-semibold items-center justify-center pt-1 uppercase text-base text-white space-x-4 cursor-pointer drop-shadow-text-glow mb-3 lg:hidden">
@@ -33,9 +36,9 @@ const NavBar = () => {
                 <li>Simuladores</li>
             </ul>
         </header>
-        <div class='navMenu'>
+        <div class='navMenu' id="navMenuId">
             <ul class='navList'>
-                <img src={close} alt=""/>
+                <img onClick={closeMenu} class='closeImg' src={close} alt=""/>
                 <li>Acción</li>
                 <li>Aventura</li>
                 <li>Deportes</li> 
@@ -46,5 +49,7 @@ const NavBar = () => {
         </>
     )
 }
+
+
 
 export default NavBar
