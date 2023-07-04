@@ -1,5 +1,6 @@
 
 const Item = ({id, nombre, precio, img}) => {
+
     return (
         <div class="itemCont flex flex-row m-4 mb-6 p-2 sm:w-5/12 sm:m-2 sm:pt-4 sm:pb-4 justify-center sm:flex-col sm:items-center md:justify-between lg:justify-between lg:w-1/4 xl:w-1/5">
             <img class="w-2/5 mr-6 shadow-imgShadow sm:w-3/6 sm:h-100 sm:mr-0"src={img} alt={nombre}/>
@@ -9,6 +10,7 @@ const Item = ({id, nombre, precio, img}) => {
                 <p class="text-white">ID: {id}</p>
                 <div class="detButton">Ver detalles</div>
             </div>
+
         </div>
     )
 }
