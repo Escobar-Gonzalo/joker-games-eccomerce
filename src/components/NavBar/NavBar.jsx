@@ -14,7 +14,7 @@ const NavBar = () => {
             <nav class="max-w-7xl w-screen flex flex-row justify-evenly items-center md:justify-center lg:justify-evenly xl:max-w-full">
                 <div class="flex flex-row items-center mr-12">
                     <img class="" src={logo} alt="" />
-                    <h1 class="text-white font-normal drop-shadow-text-glow text-center text-2xl w-24 sm:text-3xl sm:w-72 lg:w-36 xl:w-72">JOKER GAMES</h1>
+                    <h1 class="text-white font-normal cursor-pointer drop-shadow-text-glow text-center text-2xl w-24 sm:text-3xl sm:w-72 lg:w-36 xl:w-72">JOKER GAMES</h1>
                 </div>
                 <ul class="hidden lg:flex flex-row font-sans font-semibold items-center pt-1 uppercase text-base text-white space-x-4 cursor-pointer drop-shadow-text-glow">
                     <li>Acción</li>

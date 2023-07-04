@@ -13,11 +13,16 @@ const ItemListContainer = (props) => {
             .catch(error => console.log(error))
     }, [])
     return (
-    <div class="flex gap-y-6 flex-col items-center mt-8">
-        <h2 class="contTitle text-white text-5xl md:text-6xl">{props.greeting}</h2>
-        <p class="contSubTitle flex w-4/5 font-sans text-white font-semibold text-xl text-center md:text-2xl md:text-center md:flex md:w-4/5">{props.subtitle}</p>
+    <>
+        <div class="flex flex-col gap-y-5 items-center sm:mt-4">
+            <h2 class="contTitle text-white text-5xl self-center text-center mt-8 mb-3 md:text-6xl">{props.greeting}</h2>
+            <p class="contSubTitle flex text-center mb-4 font-sans text-white font-semibold text-xl md:text-2xl md:text-center md:flex">{props.subtitle}</p>
+        </div>
+        <div class="flex flex-wrap">
         <ItemList games={games}/>
-    </div>
+        </div>
+        
+    </>
     )
 }
 

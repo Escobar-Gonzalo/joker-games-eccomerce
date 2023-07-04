@@ -6,8 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage:{
+        'detail-button': 'background-image: linear-gradient(to right top, #074db7, #0041b2, #0034ad, #0026a6, #00159f);'
+      },
       boxShadow:{
-        'navShadow': '0 0 0 100vmax rgba(0, 0, 0, .5)'
+        'navShadow': '0 0 0 100vmax rgba(0, 0, 0, .5)',
+        'imgShadow': '2px 2px 4px 1px rgba(0, 0, 0, 0.3)'
       },
       dropShadow:{
         'text-glow': '0 0 4px rgb(222,91,255)',

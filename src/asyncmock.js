@@ -24,3 +24,12 @@ export const getGames = () =>{
     })
 }
 
+export const getOneGame = (id) => {
+    return new Promise((resolve) =>{
+        setTimeout(()=>{
+            const game = myGames.find(g=> g.id === id);
+            resolve(game);
+        },1500)
+    })
+}
+
