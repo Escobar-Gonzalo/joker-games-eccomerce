@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
     }, [idGame])
 
     return (
-        <div>
+        <div class="flex flex-row justify-center">
             <ItemDetail {...game}/>
         </div>
     )

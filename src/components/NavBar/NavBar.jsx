@@ -20,21 +20,21 @@ const NavBar = () => {
                     </Link>
                 </div>
                 <ul class="hidden lg:flex flex-row font-sans font-semibold items-center pt-1 uppercase text-base text-white space-x-4 cursor-pointer drop-shadow-text-glow">
-                    <Link to="/categoria/1">
-                        <li>Acción</li>
-                    </Link>
-                    <Link to="/categoria/2">
-                        <li>Aventura</li>
-                    </Link>
-                    <Link to="/categoria/3">
-                        <li>Deportes</li>
-                    </Link>
-                    <Link to="/categoria/4">
-                        <li>Plataformas</li>
-                    </Link>
-                    <Link to="/categoria/5">
-                        <li>Simuladores</li>
-                    </Link>
+                    <li>
+                        <NavLink to="/categoria/1">Acción</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/categoria/2">Aventura</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/categoria/3">Deportes</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/categoria/4">Plataformas</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/categoria/5">Simuladores</NavLink>
+                    </li>
                 </ul>
                 <CartWidget/>
                 <div onClick={openMenu} class="menuButton h-12 w-12 flex flex-row flex-nowrap justify-center rounded-full bg-black cursor-pointer md:hidden">
@@ -42,41 +42,41 @@ const NavBar = () => {
                 </div>
             </nav>
             <ul class="hidden md:flex flex-row font-sans font-semibold items-center justify-center pt-1 uppercase text-base text-white space-x-4 cursor-pointer drop-shadow-text-glow mb-3 lg:hidden">
-                <Link to="/categoria/1">
-                    <li>Acción</li>
-                </Link>
-                <Link to="/categoria/2">
-                    <li>Aventura</li>
-                </Link>
-                <Link to="/categoria/3">
-                    <li>Deportes</li>
-                </Link>
-                <Link to="/categoria/4">
-                    <li>Plataformas</li>
-                </Link>
-                <Link to="/categoria/5">
-                    <li>Simuladores</li>
-                </Link>
+                <li>
+                    <NavLink to="/categoria/1">Acción</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/categoria/2">Aventura</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/categoria/3">Deportes</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/categoria/4">Plataformas</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/categoria/5">Simuladores</NavLink>
+                </li>
             </ul>
         </header>
         <div class='navMenu' id="navMenuId">
             <ul class='navList'>
                 <img onClick={closeMenu} class='closeImg' src={close} alt=""/>
-                <Link to="/categoria/1">
-                    <li>Acción</li>
-                </Link>
-                <Link to="/categoria/2">
-                    <li>Aventura</li>
-                </Link>
-                <Link to="/categoria/3">
-                    <li>Deportes</li>
-                </Link>
-                <Link to="/categoria/4">
-                    <li>Plataformas</li>
-                </Link>
-                <Link to="/categoria/5">
-                    <li>Simuladores</li>
-                </Link>
+                <li onClick={closeMenu}>
+                    <NavLink to="/categoria/1">Acción</NavLink>
+                </li>
+                <li onClick={closeMenu}>
+                    <NavLink to="/categoria/2">Aventura</NavLink>
+                </li>
+                <li onClick={closeMenu}>
+                    <NavLink to="/categoria/3">Deportes</NavLink>
+                </li>
+                <li onClick={closeMenu}>
+                    <NavLink to="/categoria/4">Plataformas</NavLink>
+                </li>
+                <li onClick={closeMenu}>
+                    <NavLink to="/categoria/5">Simuladores</NavLink>
+                </li>
             </ul>
         </div>
         </>

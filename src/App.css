@@ -65,6 +65,20 @@ li:hover::after{
   box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2)
 }
 
+.cartButton{
+  background-image: linear-gradient(to left top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  border-radius: 5px;
+  padding: 2px 8px 2px 8px;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2)
+}
+
+.countInput{
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2px 6px 2px 6px;
+}
+
 
 
 @media (min-width: 640px) and (max-width: 768px){
