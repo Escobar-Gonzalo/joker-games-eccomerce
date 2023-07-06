@@ -1,9 +1,31 @@
-import {useItemCount} from "../../Hooks/UseItemCount"
+import React, { useState } from 'react';
+import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
 
-const ItemDetail = ({id,nombre,precio,img,desc}) => {
+//1) importamos
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
+
+
+
+
+const ItemDetail = ({id,nombre,precio,img,desc, stock}) => {
     
-    const {count, add, sub} = useItemCount(1,10);
+    const [addAmount, setAddAmount] = useState(0);
     
+
+    //2) Usamos el useContext
+    const {addItem} = useContext(CartContext)
+
+    const handleAmount = (amount) =>{
+        setAddAmount(amount);
+
+    const item = {id, nombre, precio};
+    addItem(item, amount);
+    }
+
+
+    //
     return (
     <div class="itemCont flex flex-col m-4 mb-6 p-2 items-center sm:w-2/3 md:w-2/3 lg:w-1/3 xl:w-1/3">
         <img class="w-2/3 shadow-imgShadow" src={img} alt={nombre}/>
@@ -12,14 +34,12 @@ const ItemDetail = ({id,nombre,precio,img,desc}) => {
             <p class="text-white text-center text-3xl font-bold">$ {precio}</p>
             <p class="text-white text-lg">{id}</p>
             <p class="text-white text-lg mb-2 text-center">{desc}</p>
-            <div class="flex flex-row gap-x-4 text-white mb-6 ">
-                <p class="cartButton">Agregar al carrito</p>
-                <div>
-                    <button class="cartButton"  onClick={sub}> - </button>
-                    <strong class="countInput"> {count} </strong>
-                    <button class="cartButton"  onClick={add}> + </button>
-                </div>
-            </div>
+            {
+
+            }
+            {
+                addAmount > 0 ? (<Link to="/cart"> Terminar compra </Link>) : (<ItemCount initialValue={1} stock={stock} addFunction={handleAmount}/>)
+            }
         </div>
     </div>
     )
