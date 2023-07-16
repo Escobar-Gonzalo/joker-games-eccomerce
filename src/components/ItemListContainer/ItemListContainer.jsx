@@ -1,22 +1,48 @@
 import { useState } from "react"
 import { useEffect } from "react"
-import { getGames, getGameByCat } from "../../asyncmock"
+//import { getGames, getGameByCat } from "../../asyncmock"
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+
+//nuevas funciones
+import { collection, getDocs, where, query, getDoc } from "firebase/firestore";
+import { db } from "../../services/config";
+
+//Collection se usa para vincular una coleccion de Firestore
+//getDocs me trae todos los docs de una coleccion.
+//QUery se usa para hacer consultas a la base de datos.
+//where se usa para hacer un filtrado en la consulta.
 
 const ItemListContainer = (props) => {
     const [games, setGames] = useState([]);
 
     const {idCategoria} = useParams();
 
-    useEffect(()=>{
+useEffect ( ()=> {
+    const myGames = idCategoria ? query(collection(db, "myGames"), where("idCat", "==", idCategoria)) : collection(db, "myGames");
+
+    getDocs(myGames)
+        .then(res => {
+            const newGames = res.docs.map( doc =>{
+                const data = doc.data()
+                return {id: doc.id, ...data}
+            })
+            setGames(newGames);
+        })
+        .catch(error => console.log(error))
+}, [idCategoria])
+
+
+
+
+/*   useEffect(()=>{
 
         const funcion = idCategoria ? getGameByCat : getGames;
 
         funcion(idCategoria)
             .then(res => setGames(res))
             
-    },[idCategoria]);
+    },[idCategoria]);*/
 
     return (
     <>

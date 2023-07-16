@@ -61,7 +61,7 @@ export const CartProvider = ({children}) => {
         const actualizedCart = cart.filter(g => g.item.id !== id);
 
         setCart(actualizedCart);
-        setTotalAmount(prev => prev - subtractedItem.cantidad);
+        setTotalAmount(prev => prev - subtractedItem.amount);
         setTotal( prev => prev - (subtractedItem.item.precio * subtractedItem.amount));
     }
 
