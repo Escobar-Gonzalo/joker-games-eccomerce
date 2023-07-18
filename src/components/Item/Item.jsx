@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const Item = ({id, nombre, precio, img}) => {
+const Item = ({id, nombre, precio, img, stock}) => {
 
     return (
         <div class="itemCont flex flex-row m-4 mb-6 p-2 sm:w-5/12 sm:m-2 sm:pt-4 sm:pb-4 justify-center sm:flex-col sm:items-center md:justify-between lg:justify-between lg:w-auto xl:w-auto">
@@ -8,7 +8,7 @@ const Item = ({id, nombre, precio, img}) => {
             <div class="flex flex-col w-3/5 items-start pr-6 gap-y-2 mt-2 justify-between sm:items-center sm:pr-0 sm:w-4/5 sm:justify-between md:justify-between lg:justify-between xl:justify-between 2xl:justify-between">
                 <h3 class="text-white text-lg font-bold sm:text-center sm:text-xl">{nombre}</h3>
                 <p class="text-white text-xl font-bold sm:text-2xl">$ {precio}</p>
-                <p class="text-white">ID: {id}</p>
+                <p class="text-white">Disponibles: {stock}</p>
                 <Link to={`/game/${id}`}>
                 <div class="detButton">Ver detalles</div>
                 </Link>
