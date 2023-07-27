@@ -3,6 +3,8 @@ import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
+import cart from '../../assets/cart.svg'
+import apps from '../../assets/apps.svg'
 
 const ItemDetail = ({ id, nombre, precio, img, desc, stock }) => {
 
@@ -24,12 +26,22 @@ const ItemDetail = ({ id, nombre, precio, img, desc, stock }) => {
                 <h3 class="text-white text-center text-2xl font-bold">{nombre}</h3>
                 <p class="text-white text-center text-3xl font-bold">$ {precio}</p>
                 <p class="text-white text-lg">{id}</p>
-                <p class="text-white text-lg mb-2 text-center">{desc}</p>
+                <p class="text-white text-lg mb-3 text-center">{desc}</p>
                 {
                     addAmount > 0 ? (
-                        <div>
-                            <Link to="/cart"> Terminar compra </Link>
-                            <Link to="/">Seguir comprando</Link>
+                        <div class="flex flex-row text-white gap-x-2 mb-3 font-semibold">
+                            <Link to="/cart"> 
+                            <button class="cartButton flex flex-col items-center">
+                                <img class="w-14 mb-1 mt-1" src={cart} alt="" />
+                                <p>Terminar compra</p>
+                            </button>
+                            </Link>
+                            <Link to="/">
+                                <button class="cartButton flex flex-col items-center">
+                                <img class="w-14 mb-1 mt-1" src={apps} alt="" />
+                                <p>Seguir comprando</p>
+                                </button>
+                            </Link>
                         </div>
                     ) : (<ItemCount initialValue={1} stock={stock} addFunction={handleAmount} />)
                 }

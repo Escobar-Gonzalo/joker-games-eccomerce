@@ -76,7 +76,7 @@ const Checkout = () => {
     return (
         <div>
             <h2>El juego ya casi es tuyo...</h2>
-            <form onSubmit={formHandler} >
+            <Form onSubmit={formHandler} >
                 {
                     cart.map( game => (
                         <div key={game.item.id}>
@@ -112,7 +112,7 @@ const Checkout = () => {
                     error && <p> {error} </p>
                 }
                 <button type="submit">Finalizar Compra</button>
-            </form>
+            </Form>
             {
                 orderId && (
                     <strong>¡Gracias por tu compra! Tu número de orden es {orderId}</strong>

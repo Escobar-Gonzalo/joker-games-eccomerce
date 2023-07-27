@@ -17,7 +17,7 @@ const Cart = () => {
         )
     }
     return (
-    <div>
+    <div class="flex flex-col m-4">
         {cart.map(game=> <CartItem key={game.id} {...game}/>)}
         <h3>Total: $ {total}</h3>
         <h3> Cantidad total: {totalAmount}</h3>

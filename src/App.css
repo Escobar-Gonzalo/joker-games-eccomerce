@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: auto;
+  height:100dvh;
   background-image: linear-gradient(to right bottom, #45eec6, #42ead0, #46e5d7, #51e0dd, #5edbe0, #4bd6ea, #3dd1f3, #3ccbfb, #37c0ff, #66b1ff, #9d9dff, #d281ff);
 }
 
@@ -54,7 +54,10 @@ li:hover::after{
   background-color: #0f7ce2;
 }
 
-
+.chItemCont{
+  background-color: #0f7ce2;
+  border-radius: 15px;
+}
 
 .detButton{
   color: white;

@@ -5,12 +5,15 @@ const CartItem = ({item, amount}) => {
 const {subItem} = useContext(CartContext);
 
   return (
-    <div>
-      <h4>{item.nombre}</h4>
-      <p>Cantidad: {amount}</p>
-      <p>Precio: {item.precio}</p>
-      <button onClick={()=> subItem(item.id)}>Eliminar</button>
-      <hr />
+    <div class="chItemCont flex flex-row p-6 mb-1 justify-between text-white">
+      <div class="flex flex-col">
+        <h4 class="text-lg font-semibold">{item.nombre}</h4>
+        <p>Cantidad: {amount}</p>
+      </div>
+      <div class="flex flex-col">
+        <p class="font-semibold text-xl">${item.precio}</p>
+        <button class="cursor-pointer underline" onClick={()=> subItem(item.id)}>Eliminar</button>
+      </div>
     </div>
   )
 }

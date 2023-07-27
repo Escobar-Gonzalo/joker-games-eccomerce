@@ -17,7 +17,7 @@ const ItemCount = ({ initialValue, stock, addFunction }) => {
 
     return (
         <>
-            <div class="flex flex-row gap-x-4 text-white mb-6 ">
+            <div class="flex flex-row gap-x-4 text-white mb-6 font-semibold">
                 <button class="cartButton" onClick={sub}> - </button>
                 <strong class="countInput"> {count} </strong>
                 <button class="cartButton" onClick={add}> + </button>
