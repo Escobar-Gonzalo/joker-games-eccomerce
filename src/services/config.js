@@ -2,9 +2,9 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore";
 
-
+//"AIzaSyD7y-wSKpEIV0vnEZHhk3Iea6vPS0N-aZo"
 const firebaseConfig = {
-    apiKey: "AIzaSyD7y-wSKpEIV0vnEZHhk3Iea6vPS0N-aZo",
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: "joker-games-b356e.firebaseapp.com",
     projectId: "joker-games-b356e",
     storageBucket: "joker-games-b356e.appspot.com",
