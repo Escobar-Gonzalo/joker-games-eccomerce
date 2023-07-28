@@ -76,7 +76,7 @@ const Checkout = () => {
     return (
         <div>
             <h2>El juego ya casi es tuyo...</h2>
-            <Form onSubmit={formHandler} >
+            <form onSubmit={formHandler} >
                 {
                     cart.map( game => (
                         <div key={game.item.id}>
@@ -89,30 +89,25 @@ const Checkout = () => {
                 }
                 <hr />
                 <div>
-                    <label htmlFor="">Nombre</label>
-                    <input type="text" value={name} onChange={(e)=>setName(e.target.value)}/>
+                    <input placeholder="Nombre" type="text" value={name} onChange={(e)=>setName(e.target.value)}/>
                 </div>
                 <div>
-                    <label htmlFor="">Apellido</label>
-                    <input type="text" value={lastName} onChange={(e)=>setLastName(e.target.value)}/>
+                    <input placeholder="Apellido" type="text" value={lastName} onChange={(e)=>setLastName(e.target.value)}/>
                 </div>
                 <div>
-                    <label htmlFor="">Teléfono</label>
-                    <input type="text" value={tel} onChange={(e)=>setTel(e.target.value)}/>
+                    <input placeholder="Teléfono" type="text" value={tel} onChange={(e)=>setTel(e.target.value)}/>
                 </div>
                 <div>
-                    <label htmlFor="">Email</label>
-                    <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                    <input placeholder="Email" type="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
                 </div>
                 <div>
-                    <label htmlFor="">Confirme su Email</label>
-                    <input type="email" value={emailConf} onChange={(e)=>setEmailConf(e.target.value)}/>
+                    <input placeholder="Confirme su Email" type="email" value={emailConf} onChange={(e)=>setEmailConf(e.target.value)}/>
                 </div>
                 {
                     error && <p> {error} </p>
                 }
                 <button type="submit">Finalizar Compra</button>
-            </Form>
+            </form>
             {
                 orderId && (
                     <strong>¡Gracias por tu compra! Tu número de orden es {orderId}</strong>

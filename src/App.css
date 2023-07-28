@@ -5,7 +5,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height:100dvh;
+  height:100%;
+  min-height: 100vh;
   background-image: linear-gradient(to right bottom, #45eec6, #42ead0, #46e5d7, #51e0dd, #5edbe0, #4bd6ea, #3dd1f3, #3ccbfb, #37c0ff, #66b1ff, #9d9dff, #d281ff);
 }
 
@@ -75,6 +76,17 @@ li:hover::after{
   border-radius: 5px;
   padding: 2px 8px 2px 8px;
   box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2)
+}
+
+.supButton{
+  background-image: linear-gradient(to right top, #ff6d6d, #ff668b, #ff65af, #ff6dd6, #f97cff);
+  border-radius: 5px;
+  padding: 2px 8px 2px 8px;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2)
+}
+
+.cartNum{
+  background-image: linear-gradient(to right top, #ff6d6d, #ff668b, #ff65af, #ff6dd6, #f97cff);
 }
 
 .countInput{
