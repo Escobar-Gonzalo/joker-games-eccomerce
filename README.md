@@ -1,11 +1,12 @@
-# Tienda Marolio
-Este es un proyecto de ecommerce básico que se utiliza para el curso de React. La aplicación permite ver una lista de productos de supermercado y realizar compras en línea. Los productos y las órdenes de compra se almacenan en Firebase.
+# Joker Games
+Este es un proyecto de ecommerce básico que se utiliza para el curso de React basado en la tienda de Eneba. La aplicación permite ver una lista de videojuegos y realizar compras en línea. Los videojuegos están ordenados por categoria y tanto los mismos como las órdenes de compra se almacenan en Firebase.
 
 ## Tecnologías utilizadas
 - Vite
 - React
 - React Router
 - Firebase
+- Tailwind CSS
 
 ## Funcionalidades
 - Ver una lista de productos disponibles
