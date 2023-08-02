@@ -15,7 +15,7 @@ const ItemDetail = ({ id, nombre, precio, img, desc, stock }) => {
     const handleAmount = (amount) => {
         setAddAmount(amount);
 
-        const item = { id, nombre, precio };
+        const item = { id, nombre, precio, img };
         addItem(item, amount);
     }
 
